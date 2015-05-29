@@ -1,0 +1,17 @@
+MySQL database name:a8852240_tienda
+MySQL user name:a8852240_tienda
+Password for MySQL user: w9w9dorotea
+Enter password again:w9w9dorotea
+
+
+$mysql_host = "mysql5.000webhost.com";
+$mysql_database = "a8852240_tienda";
+$mysql_user = "a8852240_tienda";
+$mysql_password = "w9w9dorotea";
+
+$conexion = mysql_connect('mysql5.000webhost.com','a8852240_tienda','w9w9dorotea');
+		mysql_select_db("a8852240_tienda",$conexion);
+
+$conexion = mysql_connect('localhost','root','w9w9dorotea');
+		mysql_select_db("tienda_online",$conexion);
+	
