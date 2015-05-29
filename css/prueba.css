@@ -1,0 +1,159 @@
+*{
+	font-family: verdana;
+}
+/*body {
+    background-image: url(../img/oio.jpg);
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}*/
+.myform{
+	border: #44aa22 solid;
+	margin: 100px auto;
+	margin-top: 100px;
+	padding-left: 20px;
+	padding-bottom: 12px;
+	width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TableGenerator {
+	margin:0px;padding:0px;
+	max-width:200px;
+	border:1px solid #00787c;
+	
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+	border-bottom-left-radius:5px;
+	
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-bottom-right-radius:5px;
+	
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+	
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+}.CSSTableGenerator table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:200px;
+	height:100px;
+	margin:0px;padding:0px;
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+	border-bottom-left-radius:5px;
+}.CSSTableGenerator tr:hover td{
+	
+}
+.CSSTableGenerator tr:nth-child(odd){ background-color:#aae0ff; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#d8f6ff; }.CSSTableGenerator td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #00787c;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:5px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.CSSTableGenerator tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSSTableGenerator tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSSTableGenerator tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td{
+		background:-o-linear-gradient(bottom, #00bcb9 5%, #00727c 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00bcb9), color-stop(1, #00727c) );
+	background:-moz-linear-gradient( center top, #00bcb9 5%, #00727c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bcb9", endColorstr="#00727c");	background: -o-linear-gradient(top,#00bcb9,00727c);
+
+	background-color:#00bcb9;
+	border:0px solid #00787c;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+.CSSTableGenerator tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #00bcb9 5%, #00727c 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00bcb9), color-stop(1, #00727c) );
+	background:-moz-linear-gradient( center top, #00bcb9 5%, #00727c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00bcb9", endColorstr="#00727c");	background: -o-linear-gradient(top,#00bcb9,00727c);
+
+	background-color:#00bcb9;
+}
+.CSSTableGenerator tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
