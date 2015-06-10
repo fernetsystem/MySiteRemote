@@ -1,0 +1,21 @@
+
+create table users(
+id_usuario int primary key auto_increment,
+nombre varchar(55),
+no_servicio varchar(55),
+password varchar(55),
+email varchar(55));
+
+create table recibos(
+id_recibo int primaty key auto_incremente,
+id_usuario int,
+fecha_limite varchar(55),
+total float,
+linea_catura double);
+
+
+create table contratos(
+id_titular int primaty key auto_increment,
+titular varchar(55),
+direccion varchar(77),
+
