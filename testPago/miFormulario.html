@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Conekta - Primero Cargo</title>
+ 
+  <!-- Incluir Conekta.js -->
+  <script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.0/js/conekta.js"></script>
+ 
+  <!-- Incluir jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+  <script type="text/javascript">
+    var publishable_key = 'key_D644HY4sgXBs6qySyYqWZXg'; 
+    Conekta.setPublishableKey(publishable_key);
+    jQuery(function($) {
+      var conektaSuccessResponseHandler = function(response) {
+        var $form = $('#payment-form');
+        var charge_id = response.id;
+        // Insert the charge_id into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="conektaChargeId" />').val(charge_id));
+        // and submit
+        $form.get(0).submit();
+      };
+      var conektaErrorResponseHandler = function(response) {
+        var $form = $('#payment-form');
+        // Errores
+        $form.find('.payment-errors').text(response.message);
+        $form.find('button').prop('disabled', false);
+      };
+      $('#payment-form').submit(function(event) {
+        var $form = $(this);
+        // Desabilita el submit para no repetir clicks
+        $form.find('button').prop('disabled', true);
+        Conekta.charge.create($('#payment-form'), conektaSuccessResponseHandler, conektaErrorResponseHandler);
+        // Prevent the form from submitting with the default action
+        return false;
+      });
+    });
+  </script>
+  <link rel="stylesheet" type="text/css" href="pago.css">
+</head>
+<body>
+  <h1>Prueba pago</h1> 
+  <form action="" method="POST" id="payment-form" class="myform">
+    <br/><br/>
+    <span class="payment-errors"></span>
+    <br/><br/>
+    <div class="form-row hidden">
+      <label>
+        <span>Monto</span>
+        <input type="text" size="12" data-conekta="amount" placeholder="10000" />
+      </label>
+    </div><br/>
+
+    <div class="form-row hidden">
+      <label>
+        <span>Descripción</span>
+         <input type="text" size="40" data-conekta="description" placeholder="Compra1 prueba1"/>
+      </label>
+    </div><br/>
+
+    <div class="form-row hidden">
+      <label>
+        <span>Moneda</span>
+        <input type="text" size="3" data-conekta="currency" value="MXN"/>
+      </label>
+    </div><br/>
+
+    <div class="form-row">
+      <label>
+        <span>Tarjetahabiente</span>
+        <input type="text" size="20" data-conekta="card[name]" placeholder="Ingresa tu nombre"/>
+      </label>
+    </div><br/>
+
+    <div class="form-row">
+      <label>
+        <span>Número</span>
+        <input type="text" size="20" data-conekta="card[number]" placeholder="xxxxxxxxxxxxxxxx"/>
+      </label>
+    </div><br/>
+
+    <div class="form-row">
+      <label>
+        <span>CVC</span>
+        <input type="text" size="4" data-conekta="card[cvc]" placeholder="094"/>
+      </label>
+    </div><br/>
+
+    <div class="form-row">
+      <label>
+        <span>Expiración (MM/YYYY)</span>
+        <input type="text" size="2" data-conekta="card[exp_month]" placeholder="11"/>
+      </label>
+      <span> / </span>
+      <input type="text" size="4" data-conekta="card[exp_year]" placeholder="2015"/>
+    </div><br/>
+
+    <button type="submit">Completar Pago</button>
+  </form>
+</body>
+</html>
